@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+body, p, form, h1, h2, h3, h4, h5, h6, td, th, table, div, ul, li, ol, dl, dt, dd, img, input, select {margin:0;padding:0;}
+img {border:0;}
+body {font-size:14px;font-family:'微软雅黑';color: #ffffff;}
+a:link,a:visited{ text-decoration:none; color:#ffffff}
+a:hover{ text-decoration:none; color:#ffffff}
+ul,ul li {list-style-type:none;}
+.clear {clear:both;height:0px;line-height:0;padding:0;border:0;overflow:hidden;font-size: 0px;}
+h1,h2,h3,h4,h5,h6{ font-size:16px; font-weight:bold;}
+input, textarea, button {outline: none;font-family: '微软雅黑';}
+.cl:after { content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cl {zoom:1;}
+
+#page-content{ padding-top:18px; position:relative;}
+#page-content ul{ width:860px; margin-left:15px;}
+#page-content ul li{ padding:30px 0 0 38px; float:left; width:230px; height:165px;text-decoration: none;}
+#page-content ul li img{ width:220px; height:158px; border:1px solid #8c867a;}
+.page-content-line .line{ color:#bfbfbf; width:757px; position:absolute; left:52px; top:1020px;}
+.page-content-btn{ background-color:#fcfcfc; padding:30px;}
