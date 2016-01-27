@@ -1,0 +1,124 @@
+body {
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	color: #333;
+}
+body,p,h1,h2,h3 {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #333;
+}
+img {
+	border-width: 0px;
+}
+
+.min-width {
+	min-width: 980px;
+	_width: expression(document.body.clientWidth < 980 ? "980px" : "auto");
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.min-width a {
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.center-main {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+.center-main a {
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+
+
+.header {
+	height: 570px;
+	background-image: url("../images/chaoshou-bg-header.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.main {
+	height: 601px;
+	background-image: url("../images/chaoshou-bg-body.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.footer {
+	height: 120px;
+	background-image: url("../images/chaoshou-bg-footer.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.top-line {
+	height: 321px;
+	padding-bottom: 8px;
+}
+.video {
+	height: 321px;
+	width: 651px;
+	float: left;
+}
+.btns {
+	height: 321px;
+	width: 322px;
+	padding-left: 7px;
+	float: left;
+}
+.btns a {
+	display: block;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.btns a:hover {
+	background-position: right;
+}
+.btn-enter {
+	height: 151px;
+	background-image: url("../images/chaoshou-btn-enter.jpg");
+}
+.btn-download {
+	height: 85px;
+	background-image: url("../images/chaoshou-btn-download.jpg");
+}
+.btn-tese {
+	height: 85px;
+	background-image: url("../images/chaoshou-btn-tese.jpg");
+}
+.banners {
+	height: 126px;
+}
+.banners a {
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 126px;
+	float: left;
+	width: 322px;
+}
+.banners1 {
+	background-image: url("../images/chaoshou-btn-banner1.jpg");
+}
+.banners2 {
+	background-image: url("../images/chaoshou-btn-banner2.jpg");
+}
+.banners3 {
+	background-image: url("../images/chaoshou-btn-banner3.jpg");
+}
+.banners-gap {
+	width: 7px;
+	height: 126px;
+	float: left;
+}
