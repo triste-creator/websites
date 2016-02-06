@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>亞曼尼天堂 - 帳號管理中心</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="js/datetimepicker/jquery.datetimepicker.css">
+</head>
+<body>
+<div id="main-temp1" class="main-container">
+    <div class="main-content">
+        <div id="header">
+            <div id="logo">
+                <a href="index.html"></a>
+            </div>
+            <div class="header-nav">
+                <a href="index.html">
+                    帳號中心
+                    <br>
+                    <span>HOME</span>
+                </a>
+            </div>
+            <div class="header-nav">
+                <a href="resetpassword.html">
+                    用戶管理
+                    <br>
+                    <span>USER</span>
+                </a>
+            </div>
+            <div class="header-nav">
+                <a href="myshare.html">
+                    分享積分
+                    <br>
+                    <span>INTEGRAL</span>
+                </a>
+            </div>
+            <div class="header-nav">
+                <a href="promotion.html">
+                    推廣中心
+                    <br>
+                    <span>PROMITION</span>
+                </a>
+            </div>
+            <div class="header-links">
+                <a href="">回到官網</a>
+                |
+                <a href="">進入論壇</a>
+            </div>
+        </div>
+        <div class="center-box-container">
+            <div class="center-box">
+                <div class="center-box-left-nav">
+                    <div class="center-box-left-nav-header center-box-left-nav-header-promotion">
+                        推廣中心
+                    </div>
+                    <ul>
+                        <li class="nav-link "><a href="promotion.html">鏈接獲取</a></li>
+                        <li class="nav-apply "><a href="apply.html">申請結款</a></li>
+                        <li class="nav-payment "><a href="payment.html">結款查詢</a></li>
+                        <li class="nav-register "><a href="register.html">實時注冊</a></li>
+                        <li class="nav-query nav-active"><a href="query.html">實時查詢</a></li>
+                        <li class="nav-what"><a href="what.html">什麽是推廣員</a></li>
+                        <li class="nav-process"><a href="process.html">推廣員流程</a></li>
+                    </ul>
+                </div>
+                <div class="center-box-right-content">
+                    <div class="content-header">
+                        <div class="content-header-right">
+                            <a href="" class="content-header-user">wucao</a>，您好！<a href="">[退出]</a>
+                        </div>
+                        <h1>實時查詢</h1>
+                    </div>
+                    <script src="js/jquery/jquery.min.js"></script>
+                    <script src="js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+                    <script>
+                        $(document).ready(function() {
+                            jQuery.datetimepicker.setLocale('zh');
+                            $('.input-date-picker').datetimepicker({
+                                lang: 'zh',
+                                timepicker: false,
+                                format:'Y-m-d'
+                            });
+                        });
+                    </script>
+                    <div class="content-body">
+                        <table class="xxg-table xxg-query-table">
+                            <tr>
+                                <td>日期</td>
+                                <td><input type="text" class="input-date-picker"> - <input type="text" class="input-date-picker"></td>
+                                <td>用户</td>
+                                <td><input type="text"></td>
+                                <td><button class="xxg-small-btn">查詢</button></td>
+                            </tr>
+                        </table>
+
+                        <table class="xxg-table">
+                            <thead>
+                            <tr>
+                                <th>帳號</th>
+                                <th>訂單編號</th>
+                                <th>充值金額（RMB元）</th>
+                                <th>充值時間</th>
+                                <th>提成（RMB元）</th>
+                                <th>是否提現</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>ke6491635644</td>
+                                <td>20151030021247</td>
+                                <td>300</td>
+                                <td>2015/09/15</td>
+                                <td>3</td>
+                                <td>否</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    總2記錄
+                                    1頁
+                                    當前<span>1/1</span>
+                                    <a href="">首頁</a>
+                                    <a href="">上一頁</a>
+                                    <a href="">下一頁</a>
+                                    <a href="">尾頁</a>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main-footer" class="main-container">
+    <div class="main-content">
+        抵制不良遊戲，拒絕盜版遊戲。 注意自我保護，謹防受騙上當。 適度遊戲益腦，沈迷遊戲傷身。 合理安排時間，享受健康生活。
+        <br>
+        COPYRIGHT © 2009-2016  gamania.in ALL RIGHTS RESERVED.   |   亞曼尼天堂 版權所有
+    </div>
+</div>
+</body>
+</html>
