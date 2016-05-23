@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>销量任务平台</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+    <div class="main-header main-container">
+        <div class="main-header-title">
+            <a href="/">销量任务平台</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-nav main-content">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="任务中心.html">任务中心</a></li>
+                <li><a href="互动中心%20-%20已接任务.html">互动中心</a></li>
+                <li><a href="评分管理%20-%20用户评分查询.html">评分管理</a></li>
+                <li><a href="我的公会%20-%20备案查询.html">我的公会</a></li>
+                <li><a href="用户中心%20-%20用户信息.html">用户中心</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="">教程</a></li>
+                <li><a href="充值%20-%20余额充值.html" class="main-nav-selected">充值</a></li>
+            </ul>
+        </div>
+        <div class="second-nav main-content">
+            <ul style="padding-left: 540px;">
+                <li><a href="充值%20-%20余额充值.html">余额充值</a></li>
+                <li><a href="充值%20-%20余额提现.html" class="second-nav-selected">余额提现</a></li>
+                <li><a href="充值%20-%20操作记录.html">操作记录</a></li>
+                <li><a href="充值%20-%20充值教程.html">充值教程</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container" style="padding-top: 20px;">
+        <div class="main-content main-content-body create-task" style="margin-bottom: 100px">
+            <div class="main-segment">
+                <div style="font-size: 20px; height: 35px;border-bottom: 1px solid #e8e8e8">
+                    <div style="width: 462px; float: left;">
+                        <div style="padding-left: 210px;">
+                            我的余额：<span style="color: #fa5712;">7.04</span>元
+                        </div>
+                    </div>
+                    <div style="width: 461px; border-left: 1px solid #d5d5d5; float: right;">
+                        <div style="padding-right: 210px; text-align: right;">
+                            我的押金：<span style="color: #fa5712;">300</span>元
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 14px; padding-top: 20px; line-height: 24px;">
+                    提示: 最近发现很多人通过网站充值套现，即日起，凡是<span style="color: #fa5712;">充值直接提现</span>的将收取<span style="color: #fa5712;">0.5%</span>的手续费！
+                </div>
+            </div>
+
+            <div class="main-segment" style="margin-top: 40px">
+                <div class="user-center-table-container">
+                    <table class="user-center-table">
+                        <tbody>
+                        <tr>
+                            <td style="width: 130px; color: #fa5712;">*提现金额:</td>
+                            <td><input type="text" class="create-task-input" style="width: 250px"> 元</td>
+                        </tr>
+                        <tr>
+                            <td>手续费：</td>
+                            <td style="color: #fa5712;"><span style="text-decoration: line-through; color: #948f8c;">1元</span>  现价0元(每2天可免一次手续费)</td>
+                        </tr>
+                        <tr>
+                            <td>支付方式：</td>
+                            <td>
+                                <label><input type="radio"> 支付宝<span style="color: #1e9fa4;">(138****87)</span></label>
+                                <label><input type="radio"> 财付通<span style="color: #1e9fa4;">(405****25)</span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #fa5712;">*账户真实姓名：</td>
+                            <td>
+                                <input type="text" class="create-task-input" placeholder="请输入帐户真实姓名" style="width: 250px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #fa5712;">*身份证号码：</td>
+                            <td>
+                                <input type="text" class="create-task-input" placeholder="请输入身份证号码" style="width: 250px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #fa5712;">*手机号码：</td>
+                            <td>
+                                <select style="width: 250px;">
+                                    <option>请先选择入会手机号</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #fa5712;">*短信验证码：</td>
+                            <td>
+                                <input type="text" class="create-task-input" placeholder="请输入验证码" style="width:125px;">
+                                <button class="xxg-btn" style="border-radius: 0px;">获取手机验证码</button>
+                                <span style="margin-left: 10px;">收不到验证码?</span>
+                                <img src="../img/img-qq.jpg" style="vertical-align: middle; margin-left: 10px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #fa5712;">*操作密码：</td>
+                            <td>
+                                <input type="text" class="create-task-input" disabled="disabled" placeholder="请输入操作密码" style="width:125px;">
+                                <span style="color: #fa5712;">您还没有创建操作密码</span>
+                                <a href="#" style="margin-left: 10px;">点此创建&gt;&gt;</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="text-align: center; padding-top: 20px;">
+                <button class="xxg-btn">我要提现</button>
+            </div>
+
+            <div style="font-size: 20px; padding-top: 33px; padding-bottom: 10px">
+                提现申请记录
+            </div>
+            <div class="task-list">
+                <table style="text-align: center">
+                    <thead>
+                    <tr>
+                        <td>申请时间</td>
+                        <td>提现帐号</td>
+                        <td>提现金额</td>
+                        <td>帐号真实姓名</td>
+                        <td>支付类型</td>
+                        <td>申请状态</td>
+                        <td>处理时间</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="7">您目前还没有申请提现记录！</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

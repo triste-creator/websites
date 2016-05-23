@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>销量任务平台</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".my-process-task-status span").click(function() {
+                $(this).parents(".my-process-task-status").find("span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+            $(".my-process-task-table thead input[type=checkbox]").change(function() {
+                $(".my-process-task-table tbody input[type=checkbox]").prop('checked', $(this).is(":checked"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main-header main-container">
+        <div class="main-header-title">
+            <a href="/">销量任务平台</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-nav main-content">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="任务中心.html">任务中心</a></li>
+                <li><a href="互动中心%20-%20已接任务.html" class="main-nav-selected">互动中心</a></li>
+                <li><a href="评分管理%20-%20用户评分查询.html">评分管理</a></li>
+                <li><a href="我的公会%20-%20备案查询.html">我的公会</a></li>
+                <li><a href="用户中心%20-%20用户信息.html">用户中心</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="">教程</a></li>
+                <li><a href="充值%20-%20余额充值.html">充值</a></li>
+            </ul>
+        </div>
+        <div class="second-nav main-content">
+            <ul style="padding-left: 192px;">
+                <li><a href="互动中心%20-%20已接任务.html">已接任务</a></li>
+                <li><a href="互动中心%20-%20已发布任务.html" class="second-nav-selected">已发布任务</a></li>
+                <li><a href="互动中心%20-%20发布新任务.html">发布新任务</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container" style="padding-top: 20px;">
+        <div class="main-content main-content-body" style="padding: 20px 0px;">
+            <div class="main-segment" style="margin-top: 12px;">
+                <table class="xxg-search-table">
+                    <tr>
+                        <td>任务编号：<input type="text" class="create-task-input" style="width: 115px;"></td>
+                        <td>买家QQ：<input type="text" class="create-task-input" style="width: 115px;"></td>
+                        <td>买家小号：<input type="text" class="create-task-input" style="width: 115px;"></td>
+                        <td>
+                            搜索类型：
+                            <select style="width: 145px;">
+                                <option>全部任务</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="xxg-btn">核对信息</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="my-process-task-status">
+                            支付类型：
+                            <select style="width: 145px;">
+                                <option>全部任务</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="my-process-task-status">
+                            任务状态：
+                            <span class="selected">全部</span>
+                            <span>等待中</span>
+                            <span>已接手</span>
+                            <span>已完成</span>
+                            <span>暂停中</span>
+                            <span>已过期</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="my-process-task-status">
+                            任务列表：
+                            <span class="selected">我发布的任务</span>
+                            <span>我发布的任务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            批量处理：
+                            <button class="xxg-btn">批量确认审核</button>
+                            <button class="xxg-btn">批量完成任务</button>
+                            <button class="xxg-btn">批量取消任务</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container" style="margin-top: 20px">
+        <div class="main-content main-content-body" style="padding: 20px 0px; margin-bottom: 100px;">
+            <div class="xxg-pager">
+                <div style="float: left;">每页显示 <a href="">10</a> | <a href="">20</a> | <a href="50">50</a> 条</div>
+                <div style="float: right;">共<span style="color: #1e9fa4">20</span>页 跳转到 <input type="text" style="border: 1px solid #747a86; height: 22px; width: 23px;"> 页 <button class="xxg-btn" style="padding: 6px 10px;">确定</button></div>
+                <ul class="pager-list">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="selected"><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div style="padding: 0px 20px;" class="task-list">
+                <table class="my-process-task-table">
+                    <thead>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>基本信息</td>
+                        <td>任务双方</td>
+                        <td>任务详情</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            淘宝任务编号:
+                            <br>
+                            5138959594
+                            <br>
+                            01-06 15:02
+                            <br>
+                            <span style="color: #fa5712;">综合搜索</span>
+                            <br>
+                            <span style="background-color: #9cf2fd;">网银单</span>
+                        </td>
+                        <td>
+                            掌柜旺旺：	香*代购潮人衣馆
+                            <br>
+                            联系卖家：	  <img src="../img/icon-qq.jpg" style="vertical-align: middle">  27***36
+                            <br>
+                            接手小号：	lv心癌晚期
+                            <br>
+                            接手IP：	114.234.83.226(江苏徐州电信)
+                            <br>
+                            任务状态：	<span style="color: #fa5712;">任务已接手</span>
+                        </td>
+                        <td>
+                            小号： <img src="../img/icon-heart.png"> <img src="../img/icon-heart.png">，周5月10, 满半年
+                            <br>
+                            浏览：综合搜索 , 152, 简聊, <span style="color: #1e9fa4;">双链接</span>, 空包签收
+                            <br>
+                            佣金：<span style="color: #1e9fa4;">三心 9=6+1+2</span>
+                            <br>
+                            接手：2016-01-06 15:13:02
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="xxg-pager">
+                <div style="float: left;">每页显示 <a href="">10</a> | <a href="">20</a> | <a href="50">50</a> 条</div>
+                <div style="float: right;">共<span style="color: #1e9fa4">20</span>页 跳转到 <input type="text" style="border: 1px solid #747a86; height: 22px; width: 23px;"> 页 <button class="xxg-btn" style="padding: 6px 10px;">确定</button></div>
+                <ul class="pager-list">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="selected"><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

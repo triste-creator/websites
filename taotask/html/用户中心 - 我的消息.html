@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>销量任务平台</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".user-center-msg-table thead input[type=checkbox]").change(function() {
+                $(".user-center-msg-table tbody input[type=checkbox]").prop('checked', $(this).is(":checked"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main-header main-container">
+        <div class="main-header-title">
+            <a href="/">销量任务平台</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-nav main-content">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="任务中心.html">任务中心</a></li>
+                <li><a href="互动中心%20-%20已接任务.html">互动中心</a></li>
+                <li><a href="评分管理%20-%20用户评分查询.html">评分管理</a></li>
+                <li><a href="我的公会%20-%20备案查询.html">我的公会</a></li>
+                <li><a href="用户中心%20-%20用户信息.html" class="main-nav-selected">用户中心</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="">教程</a></li>
+                <li><a href="充值%20-%20余额充值.html">充值</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container" style="padding-top: 20px;">
+        <div class="main-content" style="padding: 20px 0px; margin-bottom: 100px;overflow: hidden">
+            <div class="user-center-left-nav">
+                <div class="user-center-left-nav-header">个人信息</div>
+                <ul>
+                    <li><a href="用户中心%20-%20用户信息.html">用户信息</a></li>
+                    <li><a href="用户中心%20-%20提供代签地址.html">提供代签地址 <span>*</span></a></li>
+                    <li><a href="用户中心%20-%20获取代签地址.html">获取代签地址 <span>*</span></a></li>
+                    <li><a href="用户中心%20-%20我的推广.html">我的推广</a></li>
+                    <li><a href="用户中心%20-%20我要充值.html">我要充值 <span>*</span></a></li>
+                    <li><a href="用户中心%20-%20押金管理.html">押金管理</a></li>
+                    <li><a href="用户中心%20-%20地址管理.html">地址管理 <span>*</span></a></li>
+                    <li><a href="用户中心%20-%20我的消息.html" class="selected">我的消息</a></li>
+                    <li><a href="用户中心%20-%20小号管理.html">小号管理</a></li>
+                    <li><a href="用户中心%20-%20接单过滤.html">接单过滤</a></li>
+                    <li><a href="用户中心%20-%20修改操作密码.html">修改操作密码</a></li>
+                    <li><a href="用户中心%20-%20我的模版.html">我的模版</a></li>
+                    <li><a href="用户中心%20-%20视频教程.html">视频教程</a></li>
+                </ul>
+            </div>
+            <div class="user-center-right">
+                <div class="user-center-right-header">我的消息</div>
+                <div class="user-center-right-box">
+                    <div style="padding: 30px">
+                        消息状态：
+                        <select style="width: 125px; margin-right: 20px;">
+                            <option>所有消息</option>
+                        </select>
+                        <button class="xxg-btn" style="font-size: 14px">标为已读</button>
+                        <button class="xxg-btn" style="font-size: 14px">&nbsp;&nbsp;删除&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+                <div class="user-center-right-box" style="margin-top: 20px; border-bottom: 0px">
+                    <table class="user-center-msg-table">
+                        <thead>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="width: 70px;padding-left: 0px;">消息状态</td>
+                            <td style="width: 120px;">创建时间</td>
+                            <td>消息详情</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 30px; padding-right: 0px;"><input type="checkbox"></td>
+                            <td style="padding-left: 0px;">已读</td>
+                            <td>2016-01-18 15:39:19</td>
+                            <td style="text-align: left">即日起，【垫付立返、垫付押款】每单平台费用下调0.1元，【网银单】每单平台费用上调0.1元，希望各位【多放垫付单】【少放网银单】。另外，不限点数不限佣金大厅即将开放，2016年最新的无线端首页冲击内训即将开始，详情请加微信jiuwan3633</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="xxg-pager">
+                    <div style="float: left;">每页显示 <a href="">10</a> | <a href="">20</a> | <a href="50">50</a> 条</div>
+                    <div style="float: right;">共<span style="color: #1e9fa4">20</span>页 跳转到 <input type="text" style="border: 1px solid #747a86; height: 22px; width: 23px;"> 页 <button class="xxg-btn" style="padding: 6px 10px;">确定</button></div>
+                    <ul class="pager-list" style="margin-left: 170px;">
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li class="selected"><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

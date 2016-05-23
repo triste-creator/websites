@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>销量任务平台</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".task-type span").click(function() {
+                $(this).parents(".task-type").find("span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main-header main-container">
+        <div class="main-header-title">
+            <a href="/">销量任务平台</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-nav main-content">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="任务中心.html">任务中心</a></li>
+                <li><a href="互动中心%20-%20已接任务.html" class="main-nav-selected">互动中心</a></li>
+                <li><a href="评分管理%20-%20用户评分查询.html">评分管理</a></li>
+                <li><a href="我的公会%20-%20备案查询.html">我的公会</a></li>
+                <li><a href="用户中心%20-%20用户信息.html">用户中心</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="">教程</a></li>
+                <li><a href="充值%20-%20余额充值.html">充值</a></li>
+            </ul>
+        </div>
+        <div class="second-nav main-content">
+            <ul style="padding-left: 192px;">
+                <li><a href="互动中心%20-%20已接任务.html">已接任务</a></li>
+                <li><a href="互动中心%20-%20已发布任务.html">已发布任务</a></li>
+                <li><a href="互动中心%20-%20发布新任务.html" class="second-nav-selected">发布新任务</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container" style="padding-top: 20px;margin-bottom: 100px;">
+        <div class="main-content main-content-body create-task">
+            <form method="post" action="">
+                <h3><span>1</span> 任务基本信息</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">任务类型：</div>
+                            <div class="segment-line-body">
+                                <div class="task-type">
+                                    <span>淘宝垫付立返单</span>
+                                    <span class="selected">淘宝网银单</span>
+                                    <span>淘宝垫付押款单</span>
+                                    <span>京东单</span>
+                                    <span>阿里巴巴单</span>
+                                    <span>蘑菇街单</span>
+                                </div>
+                                <div style="margin-top: 16px;">
+                                    <span style="color: #948f8c;">任务消耗说明：</span>
+                                    <span style="color: #fa5712;">消耗0.28元</span>
+                                    <a href="#" style="margin-left: 20px;text-decoration: underline">点我充值&gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">买号类型：</div>
+                            <div class="segment-line-body">
+                                <div class="task-type" style="color: #948f8c;">
+                                    <span>正常限点</span>
+                                    <span class="selected">真实买号</span>
+                                    仅限淘宝任务
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">您的店铺旺旺*：</div>
+                            <div class="segment-line-body">
+                                <input type="text" class="create-task-input" style="width: 115px">
+                                <span style="color: #948f8c; margin-left: 20px;">该旺旺只会在任务接手后显示，不会泄露您的店铺的(京东任务填店铺名称)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">您的联系QQ：</div>
+                            <div class="segment-line-body">
+                                <input type="text" class="create-task-input" style="width: 115px">
+                                <span style="color: #948f8c; margin-left: 20px;">当拍手接手任务后，通过QQ联系，只会在任务接手后显示</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">任务访问方式：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 综合搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 人气搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 手机搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 手机二维码</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 类目搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 天猫搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 直通车搜索</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 电脑天天特价</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 手机天天特价</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 电脑聚划算</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 手机聚划算</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 手机淘抢购</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">返佣金时间：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 拍后立返(原)</label>
+                                </div>
+                                <div class="radio-block" style="color: #fa5712;">
+                                    <label><input type="radio"> 收菜后返(新)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">您的宝贝链接*：</div>
+                            <div class="segment-line-body">
+                                <input type="text" class="create-task-input" style="width: 606px">
+                                <span style="color: #fa5712; margin-left: 20px;">(拍手不会看到该宝贝链接)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">宝贝搜索关键词*：</div>
+                            <div class="segment-line-body">
+                                <input type="text" class="create-task-input" style="width: 198px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">宝贝搜索价格区间：</div>
+                            <div class="segment-line-body">
+                                <input type="text" class="create-task-input" style="width: 90px">
+                                -
+                                <input type="text" class="create-task-input" style="width: 90px">
+                                元
+                                <span style="color: #948f8c; margin-left: 20px;">如果宝贝排名比较靠后，可以通过价格区间辅助搜索</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">宝贝搜索备注：</div>
+                            <div class="segment-line-body">
+                                <textarea style="border: 1px solid #747a86; height: 60px; width: 334px; resize: none;"></textarea>
+                                <span style="color: #948f8c; margin-left: 20px; vertical-align: top;">比如要求卡地区搜索，天猫搜索，宝贝大概排名位置等等，方便拍手找到宝贝</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">宝贝搜索主图：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 与宝贝主图相同</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 自定义主图链接<span style="color: #fa5712;">(在宝贝搜索时显示的图片，方便拍手查找)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>2</span> 拍手小号要求</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">小号等级：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 要求拍手小号信誉等级</label>
+                                    <span style="color: #fa5712;">不能低于</span>
+                                    <select>
+                                        <option>无要求</option>
+                                    </select>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 只允许白号接单 (佣金可2元)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">小号注册时间：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 对注册时间无要求</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不要未满月的小号</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不要半年内的小号</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">小号实名：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不要求是否实名</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 必须要实名认证</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 实名认证的不要</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">小号拍单记录：</div>
+                            <div class="segment-line-body">
+                                小号一周内拍单
+                                <span style="color: #fa5712;">不超过</span>
+                                <input type="text" class="create-task-input" style="width: 75px; text-align: center;">
+                                单， 一个月内
+                                <span style="color: #fa5712;">不超过</span>
+                                <input type="text" class="create-task-input" style="width: 75px; text-align: center;">
+                                单。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">拍手地域分布：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 没有地域要求</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 排除某些地域的拍手-<span style="color: #fa5712;">不允许</span>以下地区的拍手：</label>
+                                    <input type="text" class="create-task-input" style="width: 280px; ">
+                                    <span style="color: #948f8c;">“，”逗号隔开</span>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 只要 江浙沪</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 只要 江浙沪皖</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 只要 广东</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">是否允许卖家号：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 允许卖家号</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不允许卖家号</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>3</span> 拍单浏览要求</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first segment-line-special">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">任务时间说明：</div>
+                            <div class="segment-line-body" style="line-height: 25px;">
+                                <span style="color: #fa5712;">当前任务要求 511 + 不聊， 会花费 7 分钟， 最低起步佣金为 5 元。有任何问题请咨询网站客服！</span>
+                                <br>
+                                <span style="color: #1e9fa4;">总时间 = 货比时间 + 主宝贝时间 + 副宝贝时间 + 假聊时间。</span>
+                                <br>
+                                (1)当 总时间 为  1 到  4  分钟， 最低起步佣金为4元；
+                                <br>
+                                (2)当 总时间 为  5 到 12 分钟， 最低起步佣金为5元；
+                                <br>
+                                (3)当 总时间 为13 到 15 分钟， 最低起步佣金为5.5元；
+                                <br>
+                                (4)当 总时间 大于等于16分钟， 最低起步佣金为6元；
+                                <br>
+                                (5)只要白号的任务，最低佣金可以2元；
+                                <br>
+                                (6)手机单的任务，起步佣金要加1元。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">货比：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不需要货比</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 货比1家</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 货比2家</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 货比3家</label>
+                                </div>
+                                <div style="color: #fa5712;">平台强烈建议不要货比或者最多货比1家，亲测日放百单不货比从不降权，请各位货比2家以上的朋友谨慎选择</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">页面浏览时间：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 浏览1分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 浏览3分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 浏览5分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 浏览6分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 浏览7分钟</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">浏览副宝贝：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不需要副宝贝</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 个副宝贝1分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 1个副宝贝2分钟</label>
+                                </div>
+                                <br>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 2个副宝贝1分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 2个副宝贝2分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 2个副宝贝3分钟</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">假聊：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不要假聊</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 简聊=2分钟</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 细聊=5分钟</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">自动浏览：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不允许客户端自动浏览</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 允许客户端自动浏览</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>4</span> 拍单其他要求</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">上中下截图：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 页面不需要上中下截图</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 页面要上中下截图</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">拍单链接数：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 单链接</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 双链接 <span style="color: #fa5712;">(佣金必须再加2元)</span></label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 多链接 <span style="color: #fa5712;">(佣金必须再加4元)</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">快递签收：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> <span style="color: #fa5712;">发真实空包，拍手需要签收</span></label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> <span style="color: #fa5712;">卖家填单号，拍手不需要签收</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">收菜要求：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 确认收货后无需评价</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 确认收货后自行评价</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 确认收货必须联系再评价</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 自动确认收货不评价</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>5</span> 任务佣金</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">基本佣金设置：</div>
+                            <div class="segment-line-body">
+                                任务佣金
+                                <input type="text" class="create-task-input" style="width:65px; text-align: center">
+                                元起步
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header segment-line-header-important">信誉加佣金：</div>
+                            <div class="segment-line-body">
+                                白号和1心 <span style="color: #fa5712;">减</span>
+                                <input type="text" class="create-task-input" style="width:45px; text-align: center">
+                                元
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2心加
+                                <input type="text" class="create-task-input" style="width:45px; text-align: center">
+                                元
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                3-4心加
+                                <input type="text" class="create-task-input" style="width:45px; text-align: center">
+                                元
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                5心加
+                                <input type="text" class="create-task-input" style="width:45px; text-align: center">
+                                元
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                钻号加
+                                <input type="text" class="create-task-input" style="width:45px; text-align: center">
+                                元
+                                <br>
+                                <div style="color: #fa5712;padding-top: 8px">当前任务要求 511 + 不聊， 会花费 7 分钟， 最低起步佣金为 5 元。有任何问题请咨询网站客服！</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">实名佣金加1元：</div>
+                            <div class="segment-line-body">
+                                <div class="radio-block">
+                                    <label><input type="radio"> 对实名小号佣金加1元</label>
+                                </div>
+                                <div class="radio-block">
+                                    <label><input type="radio"> 不对实名小号佣金加1元</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>6</span> 其他备注</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first segment-line-last">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">其他备注：</div>
+                            <div class="segment-line-body">
+                                <textarea style="border: 1px solid #747a86; height: 72px; width: 512px; resize: none;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3><span>7</span> 发布任务</h3>
+                <div class="segment">
+                    <div class="segment-line segment-line-first">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">设为任务模板：</div>
+                            <div class="segment-line-body">
+                                <label><input type="checkbox"> 是否将当前任务设置存为模板</label>
+                                <span style="color: #948f8c; margin-left: 20px;">模板保存当前任务设置，通过模板可以快速发布新任务</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">发布多个任务：</div>
+                            <div class="segment-line-body">
+                                此任务需要
+                                <input type="text" class="create-task-input" style="width:65px; text-align: center">
+                                个拍手
+                                <span style="color: #948f8c; margin-left: 20px;">这里您需要多少个拍手，系统就会自动创建多少个任务</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">信息审核后才可见：</div>
+                            <div class="segment-line-body">
+                                <label><input type="checkbox"> 是否必须卖家审核过拍手小号后，拍手才能看见任务的店铺和QQ！(请及时审核，或取消任务)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment-line segment-line-last segment-line-special">
+                        <div class="segment-line-main">
+                            <div class="segment-line-header">必须在客户端接单：</div>
+                            <div class="segment-line-body">
+                                <label><input type="checkbox"> 勾选后，则拍手必须是要在专治假后台的客户端上才能接手该任务！<span style="color: #fa5712;padding-top: 8px">(新)</span></label>
+                                <div style="line-height: 24px; padding-top: 15px;">
+                                    开启该选项， 这个单子只会分配给开着公会客户端的拍手 公会客户端【ST电商助手】
+                                    <br>
+                                    【防治假后台模块】公测基本结束 【防钓鱼模块】和【防售后模块】 正在紧张测试中，很快上线。 这一切都是为了各位的安全， 请各位尽量多协助管理一起做好， 客户端项目6月份才启动，还有很长的路要走
+                                    <br>
+                                    目前安装人数还不够理想，可能接单的人不会太多，请各位理解，公会在持续大力推广中，各位也可以多喊拍手尽快安装
+                                    <br>
+                                    如果发现使用了客户端的 还有假后台,请10:00 - 22:00 把漏网之鱼反馈给【客户端安装大厅】的值班黄色马甲管理
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 30px">
+                    <button type="submit" class="xxg-btn" style="font-size: 20px">发布任务</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

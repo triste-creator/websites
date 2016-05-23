@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>销量任务平台</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+    <div class="main-header main-container">
+        <div class="main-header-title">
+            <a href="/">销量任务平台</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-nav main-content">
+            <ul>
+                <li><a href="首页.html">首页</a></li>
+                <li><a href="任务中心.html" class="main-nav-selected">任务中心</a></li>
+                <li><a href="互动中心%20-%20已接任务.html">互动中心</a></li>
+                <li><a href="评分管理%20-%20用户评分查询.html">评分管理</a></li>
+                <li><a href="我的公会%20-%20备案查询.html">我的公会</a></li>
+                <li><a href="用户中心%20-%20用户信息.html">用户中心</a></li>
+                <li><a href="帮助中心.html">帮助中心</a></li>
+                <li><a href="">教程</a></li>
+                <li><a href="充值%20-%20余额充值.html">充值</a></li>
+            </ul>
+        </div>
+        <div class="second-nav main-content">
+            <ul style="padding-left: 82px;">
+                <li><a href="">任务大厅</a></li>
+                <li><a href="" class="second-nav-selected">真实买号厅</a></li>
+                <li><a href="">垫付大厅</a></li>
+                <li><a href="">立返大厅</a></li>
+                <li><a href="">其他大厅</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container" style="padding-top: 20px;">
+        <div class="main-content main-content-body" style="padding: 20px 0px;">
+            <div class="main-segment">
+                搜索条件模板：
+                <select style="width: 180px; border: 1px solid #1e9fa4;"></select>
+                <a href="" style="margin-left: 10px">添加模板</a>
+                <a href="" style="margin-left: 10px">管理模板</a>
+                <a href="" style="margin-left: 10px">模板怎么使用？</a>
+                <a href="" class="xxg-btn" style="margin-left: 65px">搜索</a>
+                <a href="" class="xxg-btn" style="margin-left: 5px">刷新一下</a>
+                <input type="checkbox" style="margin-left: 15px"> 自动刷新任务列表
+            </div>
+            <div class="main-segment" style="margin-top: 12px;">
+                <table class="xxg-search-table">
+                    <tr>
+                        <td>最低基础佣金：</td>
+                        <td width="200px"><select style="width: 145px;"></select></td>
+                        <td>最低信誉要求：</td>
+                        <td width="200px"><select style="width: 145px;"></select></td>
+                        <td>小号实名要求：</td>
+                        <td><select style="width: 145px;"></select></td>
+                    </tr>
+                    <tr>
+                        <td>信誉要求不高于：</td>
+                        <td><select style="width: 145px;"></select></td>
+                        <td>拍单链接数：</td>
+                        <td><select style="width: 145px;"></select></td>
+                        <td>是否要假聊：</td>
+                        <td><select style="width: 145px;"></select></td>
+                    </tr>
+                    <tr>
+                        <td>快速过滤要求：</td>
+                        <td colspan="5">
+                            <input type="checkbox"> 只要手机
+                            <input type="checkbox" style="margin-left: 30px"> 不要手机单
+                            <input type="checkbox" style="margin-left: 30px"> 只要白号
+                            <input type="checkbox" style="margin-left: 30px"> 不要白号单
+                            <input type="checkbox" style="margin-left: 30px"> 只要秒刷
+                            <input type="checkbox" style="margin-left: 30px"> 不要秒刷单
+                            <input type="checkbox" style="margin-left: 30px"> 不要审核单
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">
+                            过滤 不要以下地区的任务：
+                            <input type="checkbox" style="margin-left: 30px"> 河北
+                            <input type="checkbox" style="margin-left: 30px"> 邢台
+                            <input type="checkbox" style="margin-left: 30px"> 福建
+                            <input type="checkbox" style="margin-left: 30px"> 泉州
+                            <input type="checkbox" style="margin-left: 30px"> 莆田
+                            <input type="checkbox" style="margin-left: 30px"> 郴州
+                            <input type="checkbox" style="margin-left: 30px"> 聊城
+                            <input type="checkbox" style="margin-left: 30px"> 其他自定义
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #1e9fa4">任务佣金提前看：</td>
+                        <td colspan="5">
+                            <select style="width: 145px;"></select>
+                            <span style="color: #1e9fa4;">(根据您选择的小号等级，系统自动计算出您能获得的佣金)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #1e9fa4">返佣金时间：</td>
+                        <td colspan="5">
+                            <select style="width: 145px;"></select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 30px; padding-bottom: 20px; font-size: 18px;" class="main-container">
+        <span style="color: #948f8c;">查询结果：</span>
+        真实买号单数:
+        <span style="color: #fa5712;">19个</span>
+        <span style="padding-left: 15px; padding-right: 15px;">|</span>
+        垫付押款单数:
+        <span style="color: #fa5712;">19个</span>
+        <span style="padding-left: 15px; padding-right: 15px;">|</span>
+        垫付立返单数:
+        <span style="color: #fa5712;">19个</span>
+    </div>
+
+    <div class="main-container" >
+        <div class="main-content main-content-body" style="padding: 20px 0px; margin-bottom: 100px;">
+            <div class="xxg-pager">
+                <div style="float: left;">每页显示 <a href="">10</a> | <a href="">20</a> | <a href="50">50</a> 条</div>
+                <div style="float: right;">共<span style="color: #1e9fa4">20</span>页 跳转到 <input type="text" style="border: 1px solid #747a86; height: 22px; width: 23px;"> 页 <button class="xxg-btn" style="padding: 6px 10px;">确定</button></div>
+                <ul class="pager-list">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="selected"><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+            <div style="padding: 0px 20px;" class="task-list">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>基本信息</td>
+                        <td>任务要求 (上中下截图)</td>
+                        <td style="width: 220px;">其他要求</td>
+                        <td>佣金说明</td>
+                        <td>增加佣金</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="background-color: #9cf2fd;">淘宝网银单</span>
+                            <br>
+                            <span style="color: #948f8c;">[1分钟内发布]</span>
+                        </td>
+                        <td>
+                            <span style="color: #fa5712;">实名</span>，周4月12，<span style="color: #fa5712;">满月</span>，卖
+                            <br>
+                            <span style="color: #1e9fa4;">综合搜索，171</span>
+                            <br>
+                            不要 河北
+                        </td>
+                        <td>
+                            各种理由换号不刷，不是实名不刷。我会核实的。收藏分享销量截图。
+                        </td>
+                        <td>
+                            基础5元
+                            <br>
+                            <span style="color: #948f8c">实名不加1</span>
+                        </td>
+                        <td style="color: #1e9fa4;">
+                            3-4心  +1
+                            <br>
+                            5心  +2
+                        </td>
+                        <td>
+                            <a href="#" class="xxg-btn">接手任务</a>
+                            <br>
+                            <span style="line-height: 30px; color: #fa5712;">客户端专用</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="xxg-pager">
+                <div style="float: left;">每页显示 <a href="">10</a> | <a href="">20</a> | <a href="50">50</a> 条</div>
+                <div style="float: right;">共<span style="color: #1e9fa4">20</span>页 跳转到 <input type="text" style="border: 1px solid #747a86; height: 22px; width: 23px;"> 页 <button class="xxg-btn" style="padding: 6px 10px;">确定</button></div>
+                <ul class="pager-list">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="selected"><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
